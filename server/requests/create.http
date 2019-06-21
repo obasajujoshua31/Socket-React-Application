@@ -1,0 +1,8 @@
+POST http://localhost:2001/articles
+Content-Type: application/json
+Authorization: 
+
+{
+ "content": "This is my second article",
+ "description": "This is my second description"
+}

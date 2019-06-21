@@ -1,5 +1,5 @@
 {
-  "name": "Socket-React-Application",
+  "name": "typeorm-todo-application",
   "version": "1.0.0",
   "main": "app.js",
   "repository": "https://github.com/obasajujoshua31/Socket-React-Application.git",
@@ -7,24 +7,30 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node ./server/server.ts",
+    "dev": "tsc -p tsconfig.json",
+    "start:dev": "yarn dev && node build/server.js",
     "watch": "nodemon -e ts -w ./server -x yarn start"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^6.1.1",
     "@types/jsonwebtoken": "^8.3.2",
+    "@types/uuid": "^3.4.5",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.0",
     "morgan": "^1.9.1",
     "mysql": "^2.14.1",
     "reflect-metadata": "^0.1.10",
     "socket.io": "^2.2.0",
     "sqlite": "^3.0.3",
     "tslint": "^5.17.0",
-    "typeorm": "^0.2.18"
+    "typeorm": "^0.2.18",
+    "typescript-mix": "^3.1.3",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.27",
@@ -33,5 +39,13 @@
     "@types/validator": "^10.11.1",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.2"
+  },
+  "_moduleAliases": {
+    "controllers": "server/resources",
+    "routes": "server/routes",
+    "utils": "server/utils",
+    "database": "server/database/database.ts",
+    "config": "server/config/config.ts",
+    "app": "server/app.ts"
   }
 }

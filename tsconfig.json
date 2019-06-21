@@ -1,15 +1,21 @@
 {
-   "compilerOptions": {
-      "lib": [
-         "es5",
-         "es6"
-      ],
-      "target": "es6",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "outDir": "./build",
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "sourceMap": true
-   }
+  "compilerOptions": {
+    "lib": ["es5", "es6"],
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "baseUrl": "server",
+    "paths": {
+      "controllers/*": ["resources/*"],
+      "routes/*": ["routes/*"],
+      "utils/*": ["utils/*"],
+      "config": ["config/config.ts"],
+      "database": ["database/database.ts"],
+      "app": ["app.ts"]
+    }
+  }
 }
